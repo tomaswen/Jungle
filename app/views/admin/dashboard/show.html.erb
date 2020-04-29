@@ -1,2 +1,20 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<%= link_to [:admin, :products] do %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+  <h3 class="panel-title">Count of Products</h3>
+  </div>
+  <div class="panel-body">
+  <%= @products_count %>
+  </div>
+</div>
+<% end %>
+<%= link_to [:admin, :products] do %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Count of Categories</h3>
+  </div>
+  <div class="panel-body">
+    <%= @categories_count %>
+  </div>
+</div>
+<% end %>
