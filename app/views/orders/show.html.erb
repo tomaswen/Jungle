@@ -3,7 +3,7 @@
   <header class="page-header">
     <h1>Order # <%= @order.id %></h1>
   </header>
-
+  
   <div class="order-summary jumbotron">
     <h4>Thank you for your order! <%= @order.email%></h4>
 
@@ -16,8 +16,8 @@
       </tr>
     </thead>
     <tbody>
-    <% @line_items.each do |item| %> 
-      <%= render 'item', {name: item.name, description: item.description, quantity: item.quantity ,image: item.image, total_price_cents: item.total_price_cents} %>
+    <% @line_items.each do |item| %>  
+      <%= render 'item', {name: item.product.name, description: item.product.description, quantity: item.quantity ,image: item.product.image, total_price_cents: item.total_price_cents} %>
     <% end %>
     <tfoot>
         <tr>
