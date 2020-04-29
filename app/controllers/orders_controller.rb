@@ -6,8 +6,7 @@ class OrdersController < ApplicationController
                          .select("products.name","products.description","products.image","line_items.quantity","line_items.total_price_cents")
                          .where("order_id = ?", params[:id])
     puts @line_items.inspect
-    @line = LineItem.where("order_id = ?", params[:id])
-    puts @line.inspect
+    puts @order.inspect
   end
 
   def create
