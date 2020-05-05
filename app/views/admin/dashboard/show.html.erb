@@ -8,14 +8,12 @@
     </div>
   </div>
 <% end %>
-
-<%= link_to [:admin, :products] do %>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">Count of Categories</h3>
-    </div>
-    <div class="panel-body">
-      <%= @categories_count %>
-    </div>
+<%= link_to [:admin, :categories] do %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Count of Categories</h3>
+  </div>
+  <div class="panel-body">
+    <%= @categories_count %>
   </div>
 <% end %>

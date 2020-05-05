@@ -1,0 +1,12 @@
+<section class="admin-categories-index">
+
+  <header class="page-header">
+    <h1>Admin &raquo; All Categories</h1>
+  </header>
+  <div class="list-group">
+      <% @categories.each do |category| %>
+         <%= link_to category.name, category, class: 'list-group-item' %>
+      <% end %>
+      <%= link_to '+ New Category', [:new, :admin, :category], class: 'list-group-item active' %>
+   </div>
+</section>
